@@ -31,9 +31,9 @@ const projects = [
 const Portfolio = () => {
   return (
     <div className='relative w-full h-screen bg-black text-white'>
-      <div className='absolute inset-0'>
-        <img src='/backgroun.jpg' alt='Background' className='w-full h-full object-cover opacity-50' />
-      </div>
+      {/* <div className='absolute inset-0'>
+        <img src='/background.jpg' alt='Background' className='w-full h-full object-cover opacity-50' />
+      </div> */}
       <nav className='absolute top-0 left-0 w-full flex justify-between items-center px-10 py-4 text-sms'>
         <div className='flex space-x-6'>
           <Link to='/' className='text-gray-400 hover:text-white'>Home</Link>
