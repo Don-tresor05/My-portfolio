@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaBehance, FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     return (
@@ -14,15 +15,15 @@ const HomePage = () => {
         </div>
   
        
-        <nav className="flex justify-between items-center p-6 text-white">
-            <ul className="flex space-x-6">
-                <li><a href="#HomePage" className="hover:text-gray-400">Home</a></li>
-                <li><a href="#AboutPage" className="hover:text-gray-400">About</a></li>
-                <li><a href="#ResumePage" className="hover:text-gray-400">Resume</a></li>
-                <li><a href="#Portfolio" className="hover:text-gray-400">Portfolio</a></li>
-            </ul>
-            <p className="text-sm">📞 +250-784-809-323</p>
-        </nav>
+        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-4 text-sm">
+  <div className="flex space-x-6">
+    <Link to="/" className="text-blue-400 border-b-2 border-blue-400">Home</Link>
+    <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
+    <Link to="/resume" className="text-gray-400 hover:text-white">Resume</Link>
+    <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
+  </div>
+  <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+</nav>
 
 
       <motion.div 
@@ -51,22 +52,35 @@ const HomePage = () => {
           >
             Portfolio
           </motion.button>
+         
         </div>
       </motion.div>
       
-
-
-
-      
-
  <div className="absolute bottom-10 left-10 flex space-x-4 text-xl">
-        <FaBehance className="cursor-pointer hover:text-blue-400" />
+ <a href="https://web.facebook.com/dontresor.irakoze/" target="_blank" rel="noopener noreferrer">
         <FaFacebookF className="cursor-pointer hover:text-blue-400" />
+      </a>
+      <a href="https://www.linkedin.com/in/don-tr%C3%A9sor-750a3a289/" target="_blank" rel="noopener noreferrer">
         <FaLinkedinIn className="cursor-pointer hover:text-blue-400" />
+      </a>
+      <a href="https://www.instagram.com/dtresor_/" target="_blank" rel="noopener noreferrer">
         <FaInstagram className="cursor-pointer hover:text-pink-500" />
+      </a>
+      <a href="https://www.pinterest.com/yourprofile" target="_blank" rel="noopener noreferrer">
         <FaPinterest className="cursor-pointer hover:text-red-500" />
+      </a>
+      <a href="https://x.com/dtresor_" target="_blank" rel="noopener noreferrer">
         <FaTwitter className="cursor-pointer hover:text-blue-400" />
+      </a>
+      <a href="https://wa.me/+250784809323" target="_blank" rel="noopener noreferrer">
         <FaWhatsapp className="cursor-pointer hover:text-green-500" />
+      </a>
+      <a href="https://github.com/Don-tresor05" target="_blank" rel="noopener noreferrer">
+        <FaGithub className="cursor-pointer hover:text-gray-600" /> 
+      </a>
+      <a href="mailto:dontresor922@gmail.com">
+        <FaEnvelope className="cursor-pointer hover:text-red-500" /> 
+      </a>
       </div>
 
 
