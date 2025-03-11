@@ -9,22 +9,22 @@ const projects = [
     title: "E-Commerce Management System",
     description: "A web-based application to manage Bying and Selling, membership, and location tracking.",
     techStack: ["Java", "Spring Boot", "Hibernate", "MySQL", "React"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://github.com/Don-tresor05/E-Commerce-System.git",
+    githubLink: "https://github.com/Don-tresor05/E-Commerce-System.git",
   },
   {
     title: "Education Technology Platform",
     description: "An online platform for students and teachers to interact and share resources.",
     techStack: ["Node.js", "Express", "MongoDB", "React"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://github.com/Don-tresor05/EducationTechnologyPlatform.git",
+    githubLink: "https://github.com/Don-tresor05/EducationTechnologyPlatform.git",
   },
   {
     title: "Personal Portfolio Website",
     description: "A sleek and responsive portfolio showcasing projects and skills.",
     techStack: ["React.js", "Tailwind CSS", "Framer Motion"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://github.com/Don-tresor05/My-portfolio.git",
+    githubLink: "https://github.com/Don-tresor05/My-portfolio.git",
   },
 ];
 
