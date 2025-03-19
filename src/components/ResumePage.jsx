@@ -15,7 +15,9 @@ const ResumePage = () => {
           <Link to="/resume" className="text-blue-400 border-b-2 border-blue-400">Resume</Link>
           <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
         </div>
-        <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+        <Link to="/contact">
+          <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+        </Link>
       </nav>
 
      

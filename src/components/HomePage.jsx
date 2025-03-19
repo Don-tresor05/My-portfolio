@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 const HomePage = () => {
     return (
       <div className="relative w-full h-screen bg-black text-white">
@@ -22,7 +23,9 @@ const HomePage = () => {
     <Link to="/resume" className="text-gray-400 hover:text-white">Resume</Link>
     <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
   </div>
-  <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+  <Link to="/contact">
+    <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+  </Link>
 </nav>
 
 
@@ -55,6 +58,8 @@ const HomePage = () => {
          
         </div>
       </motion.div>
+
+      
       
  <div className="absolute bottom-10 left-10 flex space-x-4 text-xl">
  <a href="https://web.facebook.com/dontresor.irakoze/" target="_blank" rel="noopener noreferrer">

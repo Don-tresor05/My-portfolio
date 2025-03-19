@@ -13,7 +13,9 @@ const AboutPage = () => {
     <Link to="/resume" className="text-gray-400 hover:text-white">Resume</Link>
     <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
   </div>
-  <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+  <Link to="/contact">
+    <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+  </Link>
 </nav>
       
 
