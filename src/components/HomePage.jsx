@@ -7,7 +7,7 @@ const HomePage = () => {
     return (
       <div className="relative w-full h-screen bg-black text-white">
         
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <img
             src="/background1.jpg" 
             alt="Background"
@@ -16,7 +16,7 @@ const HomePage = () => {
         </div>
   
        
-        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold text-white">
+        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold text-white z-10">
   <div className="flex space-x-6">
     <Link to="/" className="text-blue-400 border-b-2 border-blue-400">Home</Link>
     <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
@@ -33,7 +33,7 @@ const HomePage = () => {
         initial={{ opacity: 0, y: 50 }} 
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1 }}
-        className="flex flex-col items-start justify-center h-screen px-12 space-y-4"
+        className="flex flex-col items-start justify-center h-screen px-12 space-y-4 relative"
       >
         
 
