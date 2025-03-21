@@ -43,19 +43,24 @@ const HomePage = () => {
         </h1>
         <p className="text-xl text-gray-400">Software Engineer</p>
         <div className="flex space-x-4 mt-4">
-<motion.button 
+
+          <Link to="/resume">
+          <motion.button 
             whileHover={{ scale: 1.1 }} 
             className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition duration-300"
           >
             Resume
           </motion.button>
+          </Link>
+
+          <Link to="/portfolio">
           <motion.button 
             whileHover={{ scale: 1.1 }} 
             className="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-black transition duration-300"
           >
             Portfolio
           </motion.button>
-         
+          </Link>
         </div>
       </motion.div>
 
