@@ -16,7 +16,7 @@ const HomePage = () => {
         </div>
   
        
-        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-4 text-sm">
+        <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold text-white">
   <div className="flex space-x-6">
     <Link to="/" className="text-blue-400 border-b-2 border-blue-400">Home</Link>
     <Link to="/about" className="text-gray-400 hover:text-white">About</Link>

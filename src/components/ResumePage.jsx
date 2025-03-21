@@ -8,7 +8,7 @@ const ResumePage = () => {
     <div className="relative w-full h-screen bg-black text-white flex flex-col justify-between px-10 py-6">
       
       
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-4 text-sm">
+      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold">
         <div className="flex space-x-6">
           <Link to="/" className="text-gray-400 hover:text-white">Home</Link>
           <Link to="/about" className="text-gray-400 hover:text-white">About</Link>

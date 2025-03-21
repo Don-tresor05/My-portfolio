@@ -6,7 +6,7 @@ const AboutPage = () => {
   return (
     <div className="relative w-full h-screen bg-black text-white flex flex-col justify-between">
 
-<nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-4 text-sm">
+<nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold">
   <div className="flex space-x-6">
     <Link to="/" className="text-gray-400 hover:text-white">Home</Link>
     <Link to="/about" className="text-blue-400 border-b-2 border-blue-400">About</Link>
@@ -48,7 +48,7 @@ const AboutPage = () => {
           className="w-1/2 flex justify-end"
         >
           <img 
-            src="/background.jpg" 
+            src="/pp.jpg" 
             alt="Profile" 
             className="w-[75%] rounded-lg shadow-lg"
           />

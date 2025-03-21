@@ -34,7 +34,7 @@ const Portfolio = () => {
       {/* <div className='absolute inset-0'>
         <img src='/background.jpg' alt='Background' className='w-full h-full object-cover opacity-50' />
       </div> */}
-      <nav className='absolute top-0 left-0 w-full flex justify-between items-center px-10 py-4 text-sms'>
+      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold">
         <div className='flex space-x-6'>
           <Link to='/' className='text-gray-400 hover:text-white'>Home</Link>
           <Link to='/about' className='text-gray-400 hover:text-white'>About</Link>
