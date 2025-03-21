@@ -84,10 +84,16 @@ const AboutPage = () => {
 
 
      
-      <footer className="w-full text-center py-4 border-t border-blue-400">
-        <p className="text-gray-300">Kigali-Rwanda</p>
-        <p className="text-gray-300">Kiagli Kigali</p>
-      </footer>
+      <footer className="bg-black text-gray-300 py-6">
+      <div className="text-center">
+        <p className="text-lg font-semibold">KIGALI-RWANDA</p>
+        <div className="flex items-center justify-center space-x-4">
+          <span className="w-12 h-0.5 bg-blue-400"></span>
+          <p className="text-sm">Kigali-Rwanda</p>
+          <span className="w-12 h-0.5 bg-blue-400"></span>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 };
