@@ -14,7 +14,7 @@ const AboutPage = () => {
     <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
   </div>
   <Link to="/contact">
-    <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+    <p className="text-gray-400 text-xs hover:text-white">📞 +250-784-809-323</p>
   </Link>
 </nav>
       
@@ -29,7 +29,7 @@ const AboutPage = () => {
           className="w-1/2 space-y-4"
         >
           <h2 className="text-4xl font-bold">ABOUT</h2>
-          <p className="text-gray-300 underline">dontresor922@gmail.com</p>
+          <p className="text-gray-300 font-bold underline">dontresor922@gmail.com</p>
           <div class="text-gray-300">
             <p className="first-letter:float-left
              first-letter:mr-3 first-letter:text-7xl first-letter:font-bold first-letter:text-gray-300 first-line:tracking-widest first-line:uppercase">

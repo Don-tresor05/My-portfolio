@@ -42,7 +42,7 @@ const Portfolio = () => {
           <Link to='/portfolio' className='text-blue-400 border-b-2 border-blue-400'>Portfolio</Link>
         </div>
         <Link to="/contact">
-    <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+    <p className="text-gray-400 text-xs hover:text-white">📞 +250-784-809-323</p>
   </Link>
       </nav>
 
