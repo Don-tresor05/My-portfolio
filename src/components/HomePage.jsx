@@ -24,7 +24,7 @@ const HomePage = () => {
     <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
   </div>
   <Link to="/contact">
-    <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
+    <p className="text-gray-400 text-xs hover:text-white">📞 +250-784-809-323</p>
   </Link>
 </nav>
 
