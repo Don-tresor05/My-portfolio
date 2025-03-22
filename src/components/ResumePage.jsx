@@ -16,7 +16,7 @@ const ResumePage = () => {
           <Link to="/portfolio" className="text-gray-400 hover:text-white">Portfolio</Link>
         </div>
         <Link to="/contact">
-          <p className="text-gray-400 text-xs hover:text-white">📞 +250-784-809-323</p>
+          <p className="text-gray-400 text-xs">📞 +250-784-809-323</p>
         </Link>
       </nav>
 
@@ -101,32 +101,22 @@ const ResumePage = () => {
 </div>
 
 
- <div className="absolute bottom-10 left-10 flex space-x-4 text-xl">
- <a href="https://web.facebook.com/dontresor.irakoze/" target="_blank" rel="noopener noreferrer">
-        <FaFacebookF className="cursor-pointer hover:text-blue-400" />
-      </a>
-      <a href="https://www.linkedin.com/in/don-tr%C3%A9sor-750a3a289/" target="_blank" rel="noopener noreferrer">
-        <FaLinkedinIn className="cursor-pointer hover:text-blue-400" />
-      </a>
-      <a href="https://www.instagram.com/dtresor_/" target="_blank" rel="noopener noreferrer">
-        <FaInstagram className="cursor-pointer hover:text-pink-500" />
-      </a>
-      <a href="https://www.pinterest.com/yourprofile" target="_blank" rel="noopener noreferrer">
-        <FaPinterest className="cursor-pointer hover:text-red-500" />
-      </a>
-      <a href="https://x.com/dtresor_" target="_blank" rel="noopener noreferrer">
-        <FaTwitter className="cursor-pointer hover:text-blue-400" />
-      </a>
-      <a href="https://wa.me/+250784809323" target="_blank" rel="noopener noreferrer">
-        <FaWhatsapp className="cursor-pointer hover:text-green-500" />
-      </a>
-      <a href="https://github.com/Don-tresor05" target="_blank" rel="noopener noreferrer">
-        <FaGithub className="cursor-pointer hover:text-gray-600" /> 
-      </a>
-      <a href="mailto:dontresor922@gmail.com">
-        <FaEnvelope className="cursor-pointer hover:text-red-500" /> 
-      </a>
-      </div>
+  <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
+         {[ 
+           { href: "https://web.facebook.com/dontresor.irakoze/", icon: <FaFacebookF />, color: "hover:text-blue-400" },
+           { href: "https://www.linkedin.com/in/don-tr%C3%A9sor-750a3a289/", icon: <FaLinkedinIn />, color: "hover:text-blue-400" },
+           { href: "https://www.instagram.com/dtresor_/", icon: <FaInstagram />, color: "hover:text-pink-500" },
+           { href: "https://www.pinterest.com/yourprofile", icon: <FaPinterest />, color: "hover:text-red-500" },
+           { href: "https://x.com/dtresor_", icon: <FaTwitter />, color: "hover:text-blue-400" },
+           { href: "https://wa.me/+250784809323", icon: <FaWhatsapp />, color: "hover:text-green-500" },
+           { href: "https://github.com/Don-tresor05", icon: <FaGithub />, color: "hover:text-gray-600" },
+           { href: "mailto:dontresor922@gmail.com", icon: <FaEnvelope />, color: "hover:text-red-500" },
+         ].map((item, index) => (
+           <motion.a key={index} href={item.href} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className={`cursor-pointer ${item.color}`}>
+             {item.icon}
+           </motion.a>
+         ))}
+       </motion.div>
 
       </div>
     
