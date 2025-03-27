@@ -21,7 +21,7 @@ const ResumePage = () => {
       </nav>
 
      
-      <div className="grid grid-cols-3 gap-10 w-4/5 max-w-6xl mx-auto text-center">
+      <div className="grid grid-cols-3 gap-10 w-4/5 max-w-6xl mx-auto text-center justify-center items-center">
   <div className="col-span-1 space-y-8">
     <div>
       <h3 className="text-lg font-bold border-b-2 border-blue-400">SOFTWARE SKILLS</h3>
