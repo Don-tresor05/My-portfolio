@@ -9,21 +9,21 @@ const projects = [
     title: "E-Commerce Management System",
     description: "A web-based application to manage Buying and Selling, membership, and location tracking.",
     techStack: ["Java", "Spring Boot", "Hibernate", "MySQL", "React"],
-    liveLink: "https://github.com/Don-tresor05/E-Commerce-System.git", // Replace with your actual deployed URL
+    liveLink: "https://github.com/Don-tresor05/E-Commerce-System.git", 
     githubLink: "https://github.com/Don-tresor05/E-Commerce-System.git",
   },
   {
     title: "Education Technology Platform",
     description: "An online platform for students and teachers to interact and share resources.",
     techStack: ["Node.js", "Express", "MongoDB", "React"],
-    liveLink: "https://github.com/Don-tresor05/EducationTechnologyPlatform.git", // Replace with your actual deployed URL
+    liveLink: "https://github.com/Don-tresor05/EducationTechnologyPlatform.git", 
     githubLink: "https://github.com/Don-tresor05/EducationTechnologyPlatform.git",
   },
   {
     title: "Personal Portfolio Website",
     description: "A sleek and responsive portfolio showcasing projects and skills.",
     techStack: ["React.js", "Tailwind CSS", "Framer Motion"],
-    liveLink: "https://don-tresor-portfolio.netlify.app", // Replace with your actual deployed URL
+    liveLink: "https://don-tresor-portfolio.netlify.app", 
     githubLink: "https://github.com/Don-tresor05/My-portfolio.git",
   },
 ];
@@ -31,15 +31,15 @@ const projects = [
 const Portfolio = () => {
   return (
     <div className='relative w-full min-h-screen bg-black text-white'>
-      {/* Background image with lower opacity */}
+      
       <div className='absolute inset-0 z-0'>
         <img src='/background.jpg' alt='Background' className='w-full h-full object-cover opacity-100' />
       </div>
 
-      {/* Dark overlay for better contrast */}
+      
       <div className='absolute inset-0 bg-black opacity-80 z-1'></div>
       
-      {/* Navigation - increased z-index */}
+      
       <nav className="relative z-10 flex justify-between items-center px-10 py-6 text-lg font-bold">
         <div className='flex space-x-6'>
           <Link to='/' className='text-gray-400 hover:text-white'>Home</Link>
@@ -52,7 +52,7 @@ const Portfolio = () => {
         </Link>
       </nav>
 
-      {/* Main content - increased z-index */}
+      
       <div className="relative z-10 flex justify-center items-center min-h-screen px-6 pt-24">
         <div className="w-full max-w-6xl">
           <h2 className="text-3xl font-bold border-b-2 border-blue-400 pb-2">PORTFOLIO</h2>
@@ -102,7 +102,7 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {/* Social media links - increased z-index */}
+      
       <motion.div 
         initial={{ y: 50, opacity: 0 }} 
         animate={{ y: 0, opacity: 1 }} 
