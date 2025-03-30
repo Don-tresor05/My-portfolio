@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const ContactPage = () => {
+  // State for form fields
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  // Form submission handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('http://localhost:8080/api/contact/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          email, 
+          message 
+        })
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Clear form fields
+        setEmail('');
+        setMessage('');
+      } else {
+        setSubmitStatus('error');
+        console.error('Submission failed:', result);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="relative w-full h-screen bg-black text-white flex flex-col">
       {/* Navbar */}
@@ -27,26 +70,69 @@ const ContactPage = () => {
           </h2>
           <p className="mt-3 text-gray-300">Reach out and let's start a conversation! Drop a message below.</p>
 
-          <form className="mt-6 space-y-4">
+          {/* Form with submission handling */}
+          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+            {/* Success/Error Message */}
+            {submitStatus === 'success' && (
+              <div className="bg-green-600 text-white p-3 rounded-md">
+                Message sent successfully! We'll get back to you soon.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="bg-red-600 text-white p-3 rounded-md">
+                Failed to send message. Please try again.
+              </div>
+            )}
+
             <motion.div whileHover={{ scale: 1.05 }}>
               <label className="block text-gray-300">Email</label>
-              <input type="email" placeholder="Type your Email" className="w-full p-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:border-blue-400" />
+              <input 
+                type="email" 
+                placeholder="Type your Email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full p-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:border-blue-400" 
+              />
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }}>
               <label className="block text-gray-300">Message</label>
-              <textarea placeholder="Type your Message" className="w-full p-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:border-blue-400 h-32" />
+              <textarea 
+                placeholder="Type your Message" 
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                className="w-full p-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:border-blue-400 h-32" 
+              />
             </motion.div>
-            <motion.button whileHover={{ scale: 1.1 }} className="bg-purple-600 hover:bg-purple-700 transition-all duration-300 text-white px-6 py-3 rounded-lg w-full">
-              Submit
+            <motion.button 
+              type="submit" 
+              disabled={isSubmitting}
+              whileHover={{ scale: 1.1 }} 
+              className={`
+                bg-purple-600 hover:bg-purple-700 
+                transition-all duration-300 
+                text-white px-6 py-3 
+                rounded-lg w-full
+                ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
+              `}
+            >
+              {isSubmitting ? 'Sending...' : 'Submit'}
             </motion.button>
           </form>
         </div>
         <div className="md:w-1/2 w-full p-8">
-          <iframe className="w-full h-96 rounded-lg" title="Kigali Rwanda Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15952.492912064206!2d30.05955661412332!3d-1.9575212292117984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19db58f900000001%3A0xa7a10a2aa25b4a41!2sCentury%20Cinema!5e0!3m2!1sen!2srw!4v1646942972361!5m2!1sen!2srw" allowFullScreen="" loading="lazy"></iframe>
+          <iframe 
+            className="w-full h-96 rounded-lg" 
+            title="Kigali Rwanda Location Map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15952.492912064206!2d30.05955661412332!3d-1.9575212292117984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19db58f900000001%3A0xa7a10a2aa25b4a41!2sCentury%20Cinema!5e0!3m2!1sen!2srw!4v1646942972361!5m2!1sen!2srw" 
+            allowFullScreen="" 
+            loading="lazy"
+          ></iframe>
         </div>
       </motion.div>
 
-      {/* Social Icons */}
+      {/* Rest of the existing component remains the same */}
       <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
         {[ 
           { href: "https://web.facebook.com/dontresor.irakoze/", icon: <FaFacebookF />, color: "hover:text-blue-400" },
@@ -64,7 +150,6 @@ const ContactPage = () => {
         ))}
       </motion.div>
 
-      {/* Footer */}
       <motion.footer 
         className="bg-black text-gray-300 py-6 text-center"
         initial={{ opacity: 0 }}
@@ -83,5 +168,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
-// this my contact page frontend and I need you to help me to make it's backend using springboot, right
