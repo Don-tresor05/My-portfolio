@@ -23,7 +23,7 @@ const ResumePage = () => {
       </nav>
 
      
-      <div className="grid grid-cols-3 gap-10 w-4/5 max-w-6xl mx-auto text-center justify-center items-center">
+      <div className="grid grid-cols-3 gap-10 w-4/5 max-w-6xl mx-auto text-center justify-center items-center mt-20">
   <div className="col-span-1 space-y-8">
     <div>
       <h3 className="text-lg font-bold border-b-2 border-blue-400">SOFTWARE SKILLS</h3>
@@ -43,11 +43,6 @@ const ResumePage = () => {
           <input type="range" className="w-1/2" />
         </div>
       ))}
-    </div>
-
-    <div>
-      <h3 className="text-lg font-bold border-b-2 border-blue-400">PERSONAL SKILLS</h3>
-      <p className="text-gray-300">Creativity - Team Work - Organization - Consinstency</p>
     </div>
   </div>
 
@@ -72,6 +67,10 @@ const ResumePage = () => {
     <div>
       <h3 className="text-lg font-bold border-b-2 border-blue-400">EDUCATION</h3>
       <p className="text-gray-300">IT & Software Engineering, Adventist University of Central Africa</p>
+    </div>
+    <div>
+      <h3 className="text-lg font-bold border-b-2 border-blue-400">PERSONAL SKILLS</h3>
+      <p className="text-gray-300">Creativity - Team Work - Organization - Consinstency</p>
     </div>
   </div>
 
