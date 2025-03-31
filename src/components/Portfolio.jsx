@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
+// import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaExternalLinkAlt, FaGithub as FaGithubIcon } from "react-icons/fa";
+import C from "./C";
 
 const projects = [
   {
@@ -102,8 +103,10 @@ const Portfolio = () => {
         </div>
       </div>
 
-      
-      <motion.div 
+      <div>
+        <C />
+      </div>
+      {/* <motion.div 
         initial={{ y: 50, opacity: 0 }} 
         animate={{ y: 0, opacity: 1 }} 
         transition={{ duration: 1 }} 
@@ -130,7 +133,7 @@ const Portfolio = () => {
             {item.icon}
           </motion.a>
         ))}
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
