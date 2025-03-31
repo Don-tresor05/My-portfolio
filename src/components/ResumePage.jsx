@@ -47,7 +47,7 @@ const ResumePage = () => {
 
     <div>
       <h3 className="text-lg font-bold border-b-2 border-blue-400">PERSONAL SKILLS</h3>
-      <p className="text-gray-300">Creativity - Team Work - Organization - Consinstancy</p>
+      <p className="text-gray-300">Creativity - Team Work - Organization - Consinstency</p>
     </div>
   </div>
 
@@ -78,7 +78,7 @@ const ResumePage = () => {
   <div className="col-span-1 space-y-6">
     <div>
       <h3 className="text-lg font-bold border-b-2 border-blue-400">WHAT CAN I DO?</h3>
-      <p className="text-gray-300">Build Reak-World Application</p>
+      <p className="text-gray-300">Build Real-World Application</p>
       <p className="text-gray-300">Contribute to Open Sources Projects</p>
       <p className="text-gray-300">Practice Software Testing and Debugging</p>
     </div>
