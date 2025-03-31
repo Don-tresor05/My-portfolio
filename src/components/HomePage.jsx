@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import A from "./A";
-import R from "./R";
-import P from "./P";
-import C from "./C";
+// import A from "./A";
+// import R from "./R";
+// import P from "./P";
+// import C from "./C";
 
 
 
@@ -88,12 +88,12 @@ const HomePage = () => {
          ))}
        </motion.div>
 
-       <div>
+       {/* <div>
         <A />       
         <R />     
         <P />    
         <C />
-       </div>
+       </div> */}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
-import R from "./R";
-import P from "./P";
-import C from "./C";
+// import R from "./R";
+// import P from "./P";
+// import C from "./C";
 const AboutPage = () => {
   return (
     <div className="relative w-full h-screen bg-black text-white flex flex-col justify-between">
@@ -57,11 +57,11 @@ const AboutPage = () => {
         </motion.div>
       </div>
 
-      <div>
+      {/* <div>
         <R />
         <P />
         <C />
-      </div>
+      </div> */}
 
        <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
               {[ 
@@ -82,7 +82,7 @@ const AboutPage = () => {
 
 
      
-      {/* <footer className="bg-black text-gray-300 py-6">
+      <footer className="bg-black text-gray-300 py-6">
       <div className="text-center">
         <p className="text-lg font-semibold">KIGALI-RWANDA</p>
         <div className="flex items-center justify-center space-x-4">
@@ -91,7 +91,7 @@ const AboutPage = () => {
           <span className="w-12 h-0.5 bg-blue-400"></span>
         </div>
       </div>
-    </footer> */}
+    </footer>
     </div>
   );
 };

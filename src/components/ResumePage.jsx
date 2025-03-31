@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { GiBasketballBall, GiSoccerBall, GiSwimfins, GiPoolTableCorner } from "react-icons/gi";
-// import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
-import P from "./P";
-import C from "./C";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
+// import P from "./P";
+// import C from "./C";
 
 const ResumePage = () => {
   return (
@@ -102,13 +102,13 @@ const ResumePage = () => {
   </div>
 </div>
 
-<div>
+{/* <div>
   <P />
   <C />
-</div>
+</div> */}
 
 
-  {/* <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
+  <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
          {[ 
            { href: "https://web.facebook.com/dontresor.irakoze/", icon: <FaFacebookF />, color: "hover:text-blue-400" },
            { href: "https://www.linkedin.com/in/don-tr%C3%A9sor-750a3a289/", icon: <FaLinkedinIn />, color: "hover:text-blue-400" },
@@ -123,7 +123,7 @@ const ResumePage = () => {
              {item.icon}
            </motion.a>
          ))}
-       </motion.div> */}
+       </motion.div>
        
 
       </div>
