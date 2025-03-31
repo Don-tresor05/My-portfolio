@@ -89,15 +89,9 @@ const HomePage = () => {
        </motion.div>
 
        <div>
-        <A />
-       </div>
-       <div>
-        <R />
-       </div>
-       <div>
-        <P />
-       </div>
-       <div>
+        <A />       
+        <R />     
+        <P />    
         <C />
        </div>
     </div>
