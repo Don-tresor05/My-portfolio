@@ -1,7 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  FaFacebookF, 
+  FaLinkedinIn, 
+  FaInstagram, 
+  FaPinterest, 
+  FaTwitter, 
+  FaWhatsapp, 
+  FaGithub, 
+  FaEnvelope 
+} from 'react-icons/fa';
 
 const ContactPage = () => {
   // State for form fields
@@ -28,7 +37,14 @@ const ContactPage = () => {
         })
       });
       
-      const result = await response.json();
+      // Handle both text and JSON responses
+      let result;
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        result = await response.text();
+      }
       
       if (response.ok) {
         setSubmitStatus('success');
@@ -132,7 +148,7 @@ const ContactPage = () => {
         </div>
       </motion.div>
 
-      {/* Rest of the existing component remains the same */}
+      {/* Social Media Links */}
       <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
         {[ 
           { href: "https://web.facebook.com/dontresor.irakoze/", icon: <FaFacebookF />, color: "hover:text-blue-400" },
