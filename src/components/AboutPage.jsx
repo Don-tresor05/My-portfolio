@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPinterest, FaTwitter, FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
 import R from "./R";
+import P from "./P";
 import C from "./C";
 const AboutPage = () => {
   return (
@@ -58,6 +59,7 @@ const AboutPage = () => {
 
       <div>
         <R />
+        <P />
         <C />
       </div>
 
