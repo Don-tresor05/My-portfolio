@@ -13,13 +13,13 @@ import {
 } from 'react-icons/fa';
 
 const ContactPage = () => {
-  // State for form fields
+  
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // Form submission handler
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -37,7 +37,7 @@ const ContactPage = () => {
         })
       });
       
-      // Handle both text and JSON responses
+      
       let result;
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
@@ -48,7 +48,7 @@ const ContactPage = () => {
       
       if (response.ok) {
         setSubmitStatus('success');
-        // Clear form fields
+        
         setEmail('');
         setMessage('');
       } else {
@@ -65,7 +65,7 @@ const ContactPage = () => {
 
   return (
     <div className="relative w-full h-screen bg-black text-white flex flex-col">
-      {/* Navbar */}
+      
       <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-lg font-bold">
         <div className="flex space-x-6">
           <Link to="/" className="text-gray-400 hover:text-white">Home</Link>
@@ -78,7 +78,7 @@ const ContactPage = () => {
         </Link>
       </nav>
 
-      {/* Contact Section */}
+     
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="flex flex-col md:flex-row w-full h-full items-center justify-center px-10">
         <div className="md:w-1/2 w-full p-8">
           <h2 className="text-3xl font-bold">
@@ -86,9 +86,9 @@ const ContactPage = () => {
           </h2>
           <p className="mt-3 text-gray-300">Reach out and let's start a conversation! Drop a message below.</p>
 
-          {/* Form with submission handling */}
+          
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-            {/* Success/Error Message */}
+           
             {submitStatus === 'success' && (
               <div className="bg-green-600 text-white p-3 rounded-md">
                 Message sent successfully! We'll get back to you soon.
@@ -152,7 +152,7 @@ const ContactPage = () => {
         </div>
       </motion.div>
 
-      {/* Social Media Links */}
+      
       <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="absolute bottom-10 left-10 flex space-x-4 text-xl">
         {[ 
           { href: "https://web.facebook.com/dontresor.irakoze/", icon: <FaFacebookF />, color: "hover:text-blue-400" },
