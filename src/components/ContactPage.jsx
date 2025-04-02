@@ -138,13 +138,17 @@ const ContactPage = () => {
           </form>
         </div>
         <div className="md:w-1/2 w-full p-8">
-          <iframe 
+        <iframe 
             className="w-full h-96 rounded-lg" 
             title="Kigali Rwanda Location Map" 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15952.492912064206!2d30.05955661412332!3d-1.9575212292117984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19db58f900000001%3A0xa7a10a2aa25b4a41!2sCentury%20Cinema!5e0!3m2!1sen!2srw!4v1646942972361!5m2!1sen!2srw" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7705.002726580988!2d30.104208000000007!3d-1.9555426999999963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2srw!4v1743572547353!5m2!1sen!2srw" 
+            width="600" 
+            height="450" 
+            style={{ border: 0 }} 
             allowFullScreen="" 
-            loading="lazy"
-          ></iframe>
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+        />             
         </div>
       </motion.div>
 
